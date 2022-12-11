@@ -11,20 +11,14 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:galacticcoders_website/main.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
+  testWidgets('Check if main text is there', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+    await tester.pumpWidget(const GalacticCoders());
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
-
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
-
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    // Verify that main text is exists.
+    expect(
+        find.text(
+            'Hello! We are Galactic Coders, a small but mighty group of individuals who share a passion for coding, collaboration, and learning. As a team, we enjoy working on various software development projects and ideas, organizing and participating in hackathons, and playing board games together. We are always looking to expand our knowledge and share it with others, and we are excited to see what the future holds for our group.'),
+        findsOneWidget);
   });
 }
