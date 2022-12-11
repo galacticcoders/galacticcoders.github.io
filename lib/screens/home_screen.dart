@@ -21,7 +21,7 @@ class HomeScreen extends StatelessWidget {
               color: Colors.white70,
             ),
             child: const Text(
-              'Hello! We are Galactic Coders, a small but mighty group of individuals who share a passion for coding, collaboration, and learning. As a team, we enjoy working on various software development projects and ideas, organizing and participating in hackathons, and playing board games together. We are always looking to expand our knowledge and share it with others, and we are excited to see what the future holds for our group.  ',
+              'Hello! We are Galactic Coders, a small but mighty group of individuals who share a passion for coding, collaboration, and learning. As a team, we enjoy working on various software development projects and ideas, organizing and participating in hackathons, and playing board games together. We are always looking to expand our knowledge and share it with others, and we are excited to see what the future holds for our group.',
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 22, shadows: [
                 Shadow(
