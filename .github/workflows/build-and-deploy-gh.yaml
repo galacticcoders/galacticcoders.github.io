@@ -17,3 +17,11 @@ jobs:
       - run: flutter pub get
       - run: flutter test
       - run: flutter build web
+        name: Deploy to GitHub Pages
+        if: success()
+      - uses: crazy-max/ghaction-github-pages@v3
+        with:
+          target_branch: gh-pages
+          build_dir: build/web
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
