@@ -19,8 +19,6 @@ jobs:
       - run: flutter build web
       - name: Copy index.html to 404.html
         run: cp build/web/index.html build/web/404.html
-        name: Deploy to GitHub Pages
-        if: success()
       - uses: crazy-max/ghaction-github-pages@v3
         with:
           target_branch: gh-pages
