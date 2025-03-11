@@ -17,6 +17,8 @@ jobs:
       - run: flutter pub get
       - run: flutter test
       - run: flutter build web
+      - name: Update base href for GitHub Pages
+        run: sed -i 's|\$FLUTTER_BASE_HREF|/|' build/web/index.html
       - name: Copy index.html to 404.html
         run: cp build/web/index.html build/web/404.html
       - uses: crazy-max/ghaction-github-pages@v3
